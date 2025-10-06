@@ -1,0 +1,62 @@
+﻿/* Base Enhancements */
+:root {
+    --red-brand: #FF4500;
+    --gray-dark: #121212;
+}
+
+.font-inter { font-family: 'Inter', sans-serif; }
+
+body { line-height: 1.7; }
+
+/* Micro-Interactions */
+.group:hover .group-hover\:scale-110 { transform: scale(1.1); }
+.transform-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.transform-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+
+.portfolio-item { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.portfolio-item:focus { outline: 2px solid var(--red-brand); outline-offset: 2px; }
+
+.filter-btn.active { transform: translateY(-1px); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+
+/* Modal Animations */
+#modal[open] { animation: fadeInModal 0.3s ease-out; }
+@keyframes fadeInModal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+#modal::backdrop { background: rgba(0,0,0,0.5); }
+
+/* A/B Variant */
+.variant-red { color: var(--red-brand) !important; text-shadow: 0 2px 4px rgba(255,69,0,0.1); }
+
+/* Form Styles */
+input, textarea, select { 
+    @apply appearance-none; 
+}
+input:focus, textarea:focus { 
+    @apply ring-2 ring-red-brand ring-offset-2; 
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .text-5xl { font-size: 2.5rem; }
+    .grid-cols-3 { grid-template-columns: 1fr; }
+}
+
+/* Print Styles */
+@media print {
+    nav, footer, #cta { display: none; }
+    body { font-size: 12pt; }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .bg-white { background-color: #fff !important; }
+    .text-gray-dark { color: #000 !important; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

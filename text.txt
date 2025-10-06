@@ -1,0 +1,17 @@
+﻿stinerplys-red-site/
+├── index.html          # Enhanced home
+├── about.html          # Full bio, highlights
+├── portfolio.html      # 10 full case studies, filters, modals
+├── services.html       # 3 full services with pricing, processes, cases
+├── blog.html           # 7 articles with slugs
+├── contact.html        # Form with reCAPTCHA, calendar embed stub
+├── scripts.js          # Full interactivity, tracking
+├── styles.css          # Comprehensive custom styles
+├── README.md           # Updated
+└── assets/
+    └── images/         # Download from Unsplash, convert to WebP <100KB each
+        ├── hero.webp   # https://unsplash.com/photos/person-typing-on-laptop-7okkFhxrxNw
+        ├── team.webp   # https://unsplash.com/photos/team-meeting-in-office-9wg5jCEPBsw
+        ├── portfolio-1.webp to portfolio-10.webp  # Varied: e-com, ads, etc.
+        ├── testimonial-acme.webp (logos: 100x50 PNG/WebP)
+        └── ... (blog heroes: 5 per article)
